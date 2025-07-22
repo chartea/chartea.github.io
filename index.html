@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Private Page</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    function checkPassword() {
+      const password = prompt("Enter password:");
+      if (password === "112233") {
+        document.getElementById("protected").style.display = "block";
+      } else {
+        alert("Incorrect password!");
+      }
+    }
+    window.onload = checkPassword;
+  </script>
+</head>
+<body>
+
+  <div id="protected" style="display:none;">
+    <h2>Access Granted</h2>
+    <p>Welcome to the private content!</p>
+  </div>
+
+</body>
+</html>
